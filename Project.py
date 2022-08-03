@@ -7,27 +7,30 @@
     # (10 points): As user, I want to display a completed trip in the console/terminal
     # (5 points): As developer, I want all of my functions to have a SINGLE RESPONSIBILITY. **REMEMBER, each function should do just ONE THING!**
 
-print('')
-user_name= input('Please Enter Your Name: ')
-print(f'Hello {user_name} I am your Trip Generator!')
-print('')
+# print('')
+# user_name= input('Please Enter Your Name: ')
+# print(f'Hello {user_name} I am your Trip Generator!')
+# print('')
 
 import random
 
 
+destinations= ['Miami', 'Mexico', 'Milwaukee'] 
 
 def destination_list():
-    destinations= ['Miami', 'Mexico', 'Milwaukee']   # POSSIBLE SOLUTION: Use index integers to identify values throughout the function ??
-    random_dest= random.choice(destinations)
-    print(random_dest)
+    user_validater= False
+    while user_validater is False:
 
-does_user_like= input('Do you like this option? yes or no: ')
-if does_user_like== "yes":
-        print('Great, you will love it there!')
-elif does_user_like== "no":
+        dest_item= random.choice(destinations)
+        print(dest_item)
+        does_user_like= input('Do you like this option? yes or no: ')
+        if does_user_like== "yes":
+            print('Great, you will love it there!')
+            return dest_item
+        elif does_user_like== "no":
             print('Okay, lets try again! ')
-
-    
+        
+destination_list()   
 
 transport_list= ['Rental Car', 'Helicopter', 'Airplane']
 random_transport= random.choice(transport_list)
