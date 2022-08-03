@@ -14,9 +14,20 @@ print('')
 
 import random
 
-destinations= ['Miami', 'Mexico', 'Milwaukee']
-random_dest= random.choice(destinations)
-print(random_dest)
+
+
+def destination_list():
+    destinations= ['Miami', 'Mexico', 'Milwaukee']   # POSSIBLE SOLUTION: Use index integers to identify values throughout the function ??
+    random_dest= random.choice(destinations)
+    print(random_dest)
+
+does_user_like= input('Do you like this option? yes or no: ')
+if does_user_like== "yes":
+        print('Great, you will love it there!')
+elif does_user_like== "no":
+            print('Okay, lets try again! ')
+
+    
 
 transport_list= ['Rental Car', 'Helicopter', 'Airplane']
 random_transport= random.choice(transport_list)
@@ -31,17 +42,20 @@ random_ent= random.choice(entertainment_list)
 print(random_ent)
 
 
-
+# QUESTION for meeting: Take me through the process of working on project via VScode and updating gitHub/gitHub bash seamlessly
 
 
 
 # TODO: Make list for destinations, restaraunt, transport, entertainment
 # TODO: Try introducing RANDOM into IF,ELIF,ELSE conditional ??
-# TODO: Make FOR loop and BREAK when user_input == YES (Allows User to finalize/complete trip)
+# TODO: 
 # TODO: Craete a FUNCTION (def) for each list
-# TODO: Randomly select destination
+        # Identify what my parameters will be and how function will recall the randomizer again 
+# TODO: Randomly select all variables:
+    # Allow user to randomize singular value at a time (e.g re-randomize ONLY transportation and nothing else)
     # Take list-Get Length
     # Take Length and generate random number
     # Get value from list from random number
 # TODO: Re-select if user doesnt like option
-    # Get user input if they want to re-select
+    # Get user input ('yes' or 'no')
+    
