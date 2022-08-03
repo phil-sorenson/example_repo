@@ -7,30 +7,31 @@
     # (10 points): As user, I want to display a completed trip in the console/terminal
     # (5 points): As developer, I want all of my functions to have a SINGLE RESPONSIBILITY. **REMEMBER, each function should do just ONE THING!**
 
-# print('')
-# user_name= input('Please Enter Your Name: ')
-# print(f'Hello {user_name} I am your Trip Generator!')
-# print('')
+print('')
+user_name= input('Please Enter Your Name: ')
+print(f'Hello {user_name} I am your Trip Generator!')
+print('')
 
 import random
 
 
 destinations= ['Miami', 'Mexico', 'Milwaukee'] 
 
-def destination_list():
-    user_validater= False
-    while user_validater is False:
+def random_dest():
+    user_validater= False   # Still not 100% on how and where to use & why False
+    while user_validater is False: 
 
         dest_item= random.choice(destinations)
-        print(dest_item)
-        does_user_like= input('Do you like this option? yes or no: ')
+        does_user_like= input(f'{dest_item} has been selected, do you like this option? yes or no: ')
         if does_user_like== "yes":
-            print('Great, you will love it there!')
-            return dest_item
+            print(f'Great, you will love it in {dest_item}! ')
+            return dest_item    # Need to understand a little better
         elif does_user_like== "no":
             print('Okay, lets try again! ')
         
-destination_list()   
+confirmed_dest= random_dest()  # confirmed_dest is created so the outcome of this function (random_dest) can be used later   
+
+
 
 transport_list= ['Rental Car', 'Helicopter', 'Airplane']
 random_transport= random.choice(transport_list)
